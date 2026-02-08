@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+.wrangler
+.dev.vars
+public/mediapipe/wasm
+dev-dist
+public/models/face_landmarker.task

@@ -1,0 +1,19 @@
+TOGETHER_API_KEY=...
+TOGETHER_TTS_MODEL=hexgrad/Kokoro-82M
+TOGETHER_TTS_VOICE=af_alloy
+TOGETHER_TTS_FORMAT=wav
+
+# Optional OpenAI support (also required for /api/transcribe)
+OPENAI_API_KEY=sk-...
+OPENAI_TTS_MODEL=gpt-4o-mini-tts
+OPENAI_TTS_VOICE=alloy
+OPENAI_TTS_FORMAT=mp3
+OPENAI_TRANSCRIBE_MODEL=whisper-1
+
+# Optional OpenRouter fallback
+OPENROUTER_API_KEY=sk-or-...
+OPENROUTER_TTS_MODEL=openai/gpt-audio-mini
+OPENROUTER_TTS_VOICE=alloy
+OPENROUTER_TTS_FORMAT=wav
+OPENROUTER_SITE_URL=https://your-domain.example
+OPENROUTER_APP_NAME=Gaze Direction Tracker
