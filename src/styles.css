@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg-page: #f3f6f4;
+  --bg-surface: #ffffff;
+  --bg-surface-strong: #eef4f1;
+  --text-primary: #10231d;
+  --text-secondary: #355348;
+  --text-inverse: #f8fcfa;
+  --border-default: #b9ccc4;
+  --focus-ring: #1f6a51;
+  --accent: #2b8269;
+  --accent-strong: #1f6a51;
+  --success: #2d8d4e;
+  --warning: #a7681d;
+  --danger: #a63f46;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --shadow-soft: 0 3px 12px rgba(11, 37, 30, 0.08);
+  --shadow-raised: 0 10px 28px rgba(11, 37, 30, 0.14);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", "Noto Sans", sans-serif;
+  --font-heading: "Lexend", "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    min-height: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    background: radial-gradient(circle at 15% 10%, #e3efe8 0%, var(--bg-page) 45%);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+
+  input,
+  select {
+    min-height: 56px;
+  }
+
+  *:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 70%, white 30%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
