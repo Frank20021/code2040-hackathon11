@@ -70,6 +70,28 @@ If you want to consume the gaze output elsewhere in the app, the easiest path to
 If you want this repo to expose a cleaner “module API” (hook/component + typed events), tell me your target integration:
 - “React hook (`useGazeTracker`)” vs “headless class” vs “web component”, and the output you need (left/right only, or add up/down/blinks, etc.).
 
+## Deploy
+
+**Option A: Cloudflare Workers (recommended — includes `/api/tts` for voice)**
+
+1. Ensure the Face Landmarker model is present (required for build):  
+   `npm run download:model`  
+   (Skip if you already have `public/models/face_landmarker.task`.)
+2. Build: `npm run build`
+3. Log in to Cloudflare (first time only): `npx wrangler login`
+4. Deploy: `npx wrangler deploy`
+
+After deploy, Wrangler prints your live URL (e.g. `https://gaze-direction-tracker.<your-subdomain>.workers.dev`).
+
+**Option B: Cloudflare Pages (static only, no TTS API)**
+
+- In the Cloudflare dashboard: Pages → Create project → Connect Git (or direct upload).
+- Build command: `npm run build`
+- Output directory: `dist`  
+  Run `npm run download:model` before building if the model is not in the repo.
+
+---
+
 ## Cloudflare deployment (Workers Static Assets)
 This project builds a static site to `dist/`. You can deploy it to Cloudflare Workers with static assets.
 
