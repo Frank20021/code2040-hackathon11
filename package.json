@@ -12,6 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "prepare:mediapipe": "node scripts/copy-mediapipe-assets.mjs",
+    "download:model": "node scripts/download-face-landmarker.mjs",
     "tts:example": "node scripts/save-openrouter-tts-example.mjs"
   },
   "dependencies": {
