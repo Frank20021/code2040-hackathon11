@@ -1,4 +1,4 @@
-name = "gaze-direction-tracker"
+name = "code2040-hackathon112"
 compatibility_date = "2026-02-07"
 main = "worker.ts"
 
