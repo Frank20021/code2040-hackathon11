@@ -301,7 +301,7 @@ export default function CameraView(props: {
           <div className="rounded-md border border-warning/50 bg-warning/15 p-3 text-base text-foreground">
             <div className="font-medium">Model load error</div>
             <div className="mt-1 text-sm text-muted">
-              Make sure `public/models/face_landmarker.task` exists.
+              The face-tracking model could not be loaded. Check your connection and try again.
             </div>
             {modelError && (
               <pre className="mt-2 whitespace-pre-wrap rounded bg-cardStrong p-2 text-xs text-foreground">
