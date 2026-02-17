@@ -157,3 +157,5 @@ Offline/PWA:
 ## Notes / constraints
 - Camera permissions: iOS Safari requires a user gesture and works best over HTTPS.
 - Lighting matters: poor lighting commonly produces `NO_IRIS`.
+
+# I added myself as a Contributor 
